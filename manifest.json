@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Roll20 Webhook",
+    "description": "Sends messages to chat",
+    "version": "1",
+    "author": "me",
+    "options_page": "options.html",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["https://app.roll20.net/editor/*"],
+        "js": ["jquery-3.3.1.js","signalr.min.js","content.js"],
+        "css": ["main.css"]
+      }
+    ],
+
+    "permissions": ["storage","activeTab","declarativeContent","tabs"]
+}
