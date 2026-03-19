@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
     if(request.command === 'init'){
         console.log("init");
         setTimeout(() => {  
-            chrome.runtime.tabs.getCurrent((tab)=>sendMessage(request.message));      
+            chrome.tabs.getCurrent((tab)=>sendMessage(request.message));      
      }, 1000);
         
     }else{

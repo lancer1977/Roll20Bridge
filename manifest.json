@@ -1,13 +1,12 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Roll20 Webhook",
     "description": "Sends messages to chat",
     "version": "1",
     "author": "me",
     "options_page": "options.html",
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
     },
 
     "content_scripts": [
@@ -18,5 +17,5 @@
       }
     ],
 
-    "permissions": ["storage","activeTab","declarativeContent","tabs"]
+    "permissions": ["storage","activeTab","tabs"]
 }
